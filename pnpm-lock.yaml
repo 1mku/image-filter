@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
+  '@biomejs/biome':
+    specifier: 1.5.2
+    version: 1.5.2
   '@wasm-tool/wasm-pack-plugin':
     specifier: ^1.7.0
     version: 1.7.0
@@ -20,8 +23,99 @@ devDependencies:
   webpack-dev-server:
     specifier: ^4.15.1
     version: 4.15.1(webpack-cli@5.1.4)(webpack@5.89.0)
+  worker-loader:
+    specifier: ^3.0.8
+    version: 3.0.8(webpack@5.89.0)
 
 packages:
+
+  /@biomejs/biome@1.5.2:
+    resolution: {integrity: sha512-LhycxGQBQLmfv6M3e4tMfn/XKcUWyduDYOlCEBrHXJ2mMth2qzYt1JWypkWp+XmU/7Hl2dKvrP4mZ5W44+nWZw==}
+    engines: {node: '>=14.*'}
+    hasBin: true
+    requiresBuild: true
+    optionalDependencies:
+      '@biomejs/cli-darwin-arm64': 1.5.2
+      '@biomejs/cli-darwin-x64': 1.5.2
+      '@biomejs/cli-linux-arm64': 1.5.2
+      '@biomejs/cli-linux-arm64-musl': 1.5.2
+      '@biomejs/cli-linux-x64': 1.5.2
+      '@biomejs/cli-linux-x64-musl': 1.5.2
+      '@biomejs/cli-win32-arm64': 1.5.2
+      '@biomejs/cli-win32-x64': 1.5.2
+    dev: true
+
+  /@biomejs/cli-darwin-arm64@1.5.2:
+    resolution: {integrity: sha512-3JVl08aHKsPyf0XL9SEj1lssIMmzOMAn2t1zwZKBiy/mcZdb0vuyMSTM5haMQ/90wEmrkYN7zux777PHEGrGiw==}
+    engines: {node: '>=14.*'}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@biomejs/cli-darwin-x64@1.5.2:
+    resolution: {integrity: sha512-QAPW9rZb/AgucUx+ogMg+9eJNipQDqvabktC5Tx4Aqb/mFzS6eDqNP7O0SbGz3DtC5Y2LATEj6o6zKIQ4ZT+3w==}
+    engines: {node: '>=14.*'}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@biomejs/cli-linux-arm64-musl@1.5.2:
+    resolution: {integrity: sha512-Z29SjaOyO4QfajplNXSjLx17S79oPN42D094zjE24z7C7p3NxvLhKLygtSP9emgaXkcoESe2chOzF4IrGy/rlg==}
+    engines: {node: '>=14.*'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@biomejs/cli-linux-arm64@1.5.2:
+    resolution: {integrity: sha512-fVLrUgIlo05rO4cNu+Py5EwwmXnXhWH+8KrNlWkr2weMYjq85SihUsuWWKpmqU+bUVR+m5gwfcIXZVWYVCJMHw==}
+    engines: {node: '>=14.*'}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@biomejs/cli-linux-x64-musl@1.5.2:
+    resolution: {integrity: sha512-ZolquPEjWYUmGeERS8svHOOT7OXEeoriPnV8qptgWJmYF9EO9HUGRn1UtCvdVziDYK+u1A7PxjOdkY1B00ty5A==}
+    engines: {node: '>=14.*'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@biomejs/cli-linux-x64@1.5.2:
+    resolution: {integrity: sha512-ixqJtUHtF0ho1+1DTZQLAEwHGSqvmvHhAAFXZQoaSdABn+IcITYExlFVA3bGvASy/xtPjRhTx42hVwPtLwMHwg==}
+    engines: {node: '>=14.*'}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@biomejs/cli-win32-arm64@1.5.2:
+    resolution: {integrity: sha512-DN4cXSAoFTdjOoh7f+JITj1uQgQSXt+1pVea9bFrpbgip+ZwkONqQq+jUcmFMMehbp9LuiVtNXFz/ReHn6FY7A==}
+    engines: {node: '>=14.*'}
+    cpu: [arm64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
+
+  /@biomejs/cli-win32-x64@1.5.2:
+    resolution: {integrity: sha512-YvWWXZmk936FdrXqc2jcP6rfsXsNBIs9MKBQQoVXIihwNNRiAaBD9Iwa/ouU1b7Zxq2zETgeuRewVJickFuVOw==}
+    engines: {node: '>=14.*'}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: true
+    optional: true
 
   /@discoveryjs/json-ext@0.5.7:
     resolution: {integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==}
@@ -481,6 +575,10 @@ packages:
     resolution: {integrity: sha512-x+VAiMRL6UPkx+kudNvxTl6hB2XNNCG2r+7wixVfIYwu/2HKRXimwQyaumLjMveWvT2Hkd/cAJw+QBMfJ/EKVw==}
     dev: true
 
+  /big.js@5.2.2:
+    resolution: {integrity: sha512-vyL2OymJxmarO8gxMr0mhChsO9QGwhynfuu4+MHTAW6czfq9humCB7rKpUjDd9YUiDPU4mzpyupFSvOClAwbmQ==}
+    dev: true
+
   /binary-extensions@2.2.0:
     resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
     engines: {node: '>=8'}
@@ -848,6 +946,11 @@ packages:
 
   /electron-to-chromium@1.4.637:
     resolution: {integrity: sha512-G7j3UCOukFtxVO1vWrPQUoDk3kL70mtvjc/DC/k2o7lE0wAdq+Vwp1ipagOow+BH0uVztFysLWbkM/RTIrbK3w==}
+    dev: true
+
+  /emojis-list@3.0.0:
+    resolution: {integrity: sha512-/kyM18EfinwXZbno9FyUGeFh87KC8HRQBQGildHZbEuRyWFOmv1U10o9BBp8XVZDVNNuQKyIGIu5ZYAAXJ0V2Q==}
+    engines: {node: '>= 4'}
     dev: true
 
   /encodeurl@1.0.2:
@@ -1427,6 +1530,12 @@ packages:
     resolution: {integrity: sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug==}
     dev: true
 
+  /json5@2.2.3:
+    resolution: {integrity: sha512-XmOWe7eyHYH14cLdVPoyg+GOH3rYX++KpzrylJwSW98t3Nk+U8XOl8FWKOgwtzdb8lXGf6zYwDUzeHMWfxasyg==}
+    engines: {node: '>=6'}
+    hasBin: true
+    dev: true
+
   /kind-of@6.0.3:
     resolution: {integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==}
     engines: {node: '>=0.10.0'}
@@ -1442,6 +1551,15 @@ packages:
   /loader-runner@4.3.0:
     resolution: {integrity: sha512-3R/1M+yS3j5ou80Me59j7F9IMs4PXs3VqRrm0TU3AbKPxlmpoY1TNscJV/oGJXo8qCatFGTfDbY6W6ipGOYXfg==}
     engines: {node: '>=6.11.5'}
+    dev: true
+
+  /loader-utils@2.0.4:
+    resolution: {integrity: sha512-xXqpXoINfFhgua9xiqD8fPFHgkoq1mmmpE92WlDbm9rNRd/EbRb+Gqf908T2DMfuHjjJlksiK2RbHVOdD/MqSw==}
+    engines: {node: '>=8.9.0'}
+    dependencies:
+      big.js: 5.2.2
+      emojis-list: 3.0.0
+      json5: 2.2.3
     dev: true
 
   /locate-path@5.0.0:
@@ -2421,6 +2539,17 @@ packages:
 
   /wildcard@2.0.1:
     resolution: {integrity: sha512-CC1bOL87PIWSBhDcTrdeLo6eGT7mCFtrg0uIJtqJUFyK+eJnzl8A1niH56uu7KMa5XFrtiV+AQuHO3n7DsHnLQ==}
+    dev: true
+
+  /worker-loader@3.0.8(webpack@5.89.0):
+    resolution: {integrity: sha512-XQyQkIFeRVC7f7uRhFdNMe/iJOdO6zxAaR3EWbDp45v3mDhrTi+++oswKNxShUNjPC/1xUp5DB29YKLhFo129g==}
+    engines: {node: '>= 10.13.0'}
+    peerDependencies:
+      webpack: ^4.0.0 || ^5.0.0
+    dependencies:
+      loader-utils: 2.0.4
+      schema-utils: 3.3.0
+      webpack: 5.89.0(webpack-cli@5.1.4)
     dev: true
 
   /wrappy@1.0.2:
