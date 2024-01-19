@@ -1,12 +1,11 @@
 [package]
-name = "webassembly"
+name = "image-filter"
 version = "0.1.0"
+authors = ["Mykhailo Kushchov <mkuschov@gmail.com>"]
 edition = "2021"
 
 [lib]
 crate-type = ["cdylib"]
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 wasm-bindgen = "0.2.90"
@@ -16,3 +15,7 @@ image = "0.23.14"
 [dependencies.web-sys]
 version = "0.3.67"
 features = ["console"]
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"

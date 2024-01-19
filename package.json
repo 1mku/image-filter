@@ -1,24 +1,24 @@
 {
-  "name": "webassembly",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "webpack serve --mode=development",
-    "build": "webpack --mode=production",
-    "lint": "biome lint .",
-    "format": "biome format . --write"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@biomejs/biome": "1.5.2",
-    "@wasm-tool/wasm-pack-plugin": "^1.7.0",
-    "html-webpack-plugin": "^5.6.0",
-    "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1",
-    "worker-loader": "^3.0.8"
-  }
+	"name": "image-filter",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "webpack serve --mode=development",
+		"build": "webpack --mode=production",
+		"lint": "biome lint .",
+		"format": "biome format . --write"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@biomejs/biome": "1.5.2",
+		"@wasm-tool/wasm-pack-plugin": "^1.7.0",
+		"html-webpack-plugin": "^5.6.0",
+		"webpack": "^5.89.0",
+		"webpack-cli": "^5.1.4",
+		"webpack-dev-server": "^4.15.1",
+		"worker-loader": "^3.0.8"
+	}
 }
